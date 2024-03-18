@@ -1,0 +1,158 @@
+﻿@model IEnumerable<WebApplication1MVC.Models.McompnayModell>
+@{
+    ViewBag.Title = "ListGetReport";
+}
+
+<h2>ListGetReport</h2>
+
+<p>
+    @Html.ActionLink("Create New User","Index")
+
+</p>
+
+<table class="table table-bordered table-responsive">
+   <tr id="a">
+
+      
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyCode)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CST)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PANNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TallyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Acflag)
+        </th>
+       <th>
+           @Html.DisplayNameFor(model=>model.ImagePath)
+       </th>
+
+        <th>
+            EDIT | DELETE
+        </th>
+
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.HiddenFor(modelItem => item.CompanyID)
+
+                @Html.DisplayFor(model => item.CompanyCode)
+            </td>
+
+            <td>
+
+                @Html.DisplayFor(model => item.CompanyName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => item.CompanyAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.BST)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CellNO)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CST)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => item.PANNo)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.TallyID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Remark)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => item.phoneNo)
+
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(model => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.CreatedOn)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => item.CreatedBy)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(model => item.Acflag)
+            </td>
+
+            <td>
+
+
+                <img src="@Url.Content(item.ImagePath)" height="100" width="100" />
+
+            </td>
+
+
+
+            <td>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.CompanyID })
+
+                @Html.ActionLink("Delete", "Delete", new { id = item.CompanyID })
+
+            </td>
+
+
+        </tr>
+
+    }
+</table>

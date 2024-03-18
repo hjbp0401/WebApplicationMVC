@@ -1,0 +1,67 @@
+﻿@model WebApplication1MVC.Models.MFinanceYearModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>MFinanceYearModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Trid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col col-md-3">
+                @Html.EditorFor(model => model.Trid, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Trid, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FinanceYear, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col col-md-3">
+                @Html.EditorFor(model => model.FinanceYear, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FinanceYear, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FYear, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col col-md-3">
+                @Html.EditorFor(model => model.FYear, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FYear, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.YearClose, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col col-md-3">
+                @Html.EditorFor(model => model.YearClose, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.YearClose, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AcFlag, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col col-md-3">
+                @Html.EditorFor(model => model.AcFlag, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AcFlag, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "GetReport")
+</div>

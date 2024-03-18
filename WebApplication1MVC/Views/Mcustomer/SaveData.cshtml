@@ -1,0 +1,202 @@
+﻿@model WebApplication1MVC.Models.McustomerModel
+@{
+    ViewBag.Title = "SaveData";
+}
+
+@Html.Raw(TempData["Message"])
+
+@using(Html.BeginForm("SaveData", "Mcustomer", FormMethod.Post))
+ {
+   <div  class="row">
+         
+           <div class="col-md-3">
+
+          
+              <div class="form-group">
+
+                   <label>CustomerCode </label>
+                    @Html.HiddenFor(model => model.CustomerId, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.CustomerCode, new { @class = "form-control" })
+
+
+               </div>
+           </div>
+           
+                <div class="col-md-3">
+                   <div class="form-group">
+                       <lable> Customer Name  </lable>
+                       @Html.TextBoxFor(model=>model.CustomerName, new {@class="form-control" })
+
+                    </div>
+
+               </div>
+
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                       <lable>Phone No</lable>
+                       @Html.TextBoxFor(model=>model.PhoneNo, new  {@class="form-control" })
+
+                   </div>
+
+               </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                      <lable> FAX No </lable>
+                      @Html.TextBoxFor(model=>model.FAXNo, new {@class="form-control"})
+                    </div>
+
+                </div>
+
+                  <div class="col-md-3">
+                      <div class="form-group">
+                          <lable> Account Number</lable>
+                          @Html.TextBoxFor(model=>model.AccountNo, new  {@class="form-control" })
+
+                     </div>
+                 </div>
+                 
+                       <div class="col-md-3">
+                            <div class="form-group">
+                              <lable> Bank Name</lable>
+                              @Html.TextBoxFor(model=>model.BankName, new {@class="form-control" })
+
+
+                          </div>
+                   </div>
+                       
+                        <div class="col-md-3">
+                             <div class="form-group">
+                                 <label> Bank Address</label>
+                                 @Html.TextBoxFor(model=>model.BankAdress, new  {@class="form-control" })
+
+                              </div>
+
+                        </div>
+
+                      <div class="col-md-3">
+                          <div class="form-group">
+                               <lable> Branch Name</lable>
+                              @Html.TextBoxFor(model=>model.BranchName, new {@class="form-control" })
+
+                         </div>
+
+
+                      </div>
+
+                      <div class="col-md-3">
+                          <div class="form-group">
+                              <label>IFSC Code</label>
+                              @Html.TextBoxFor(model=>model.IFScCode, new {@class="form-control"})
+
+
+
+
+                          </div>
+
+                       </div>
+
+                      <div class="col-md-3">
+                         <div class="form-group">
+                             <lable>AcFlag</lable>
+                             @Html.TextBoxFor(model=>model.Acflag, new {@class="form-control"})
+
+
+
+
+                         </div>
+
+                     </div>
+                  
+                    <div class="col-md-3">
+                         <div class="form-group">
+                           <label>Brokrage Per</label>
+                            @Html.TextBoxFor(model=>model.BrokeragePer, new {@class="form-control" })
+
+
+
+                       </div>
+                    </div>
+
+                     <div class="col-md-3">
+                         <div class="form-group">
+                            <lable>Contact Person</lable>
+                            @Html.TextBoxFor(model=>model.ContactPerson, new {@class="form-control" })
+
+
+                        </div>
+
+                    </div>
+                             
+                     <div class="col-md-3">
+                        <div class="form-group">
+                            <lable>BST Number</lable>
+                            @Html.TextBoxFor(model=>model.BSTNo, new {@class="form-control" })
+
+                        </div>
+
+                     </div>
+
+                       <div class="col-md-3">
+                           <div class="form-group">
+                               <lable>CST Number</lable>
+                               @Html.TextBoxFor(model=>model.CSTNo, new  {@class="form-control" })
+
+                           </div>
+
+                       </div>
+                      
+
+                       <div class="col-md-3">
+                           <div class="form-group">
+                               <lable> CreatedBy</lable>
+                               @Html.TextBoxFor(model=>model.CreatedBy, new  {@class="form-control" })
+
+                           </div>
+
+                       </div>
+
+                     <div class="col-md-3">
+                         <div class="form-group">
+                             <lable>Created On</lable>
+                             @Html.TextBoxFor(model=>model.CreatedOn, new {@class="form-control" })
+
+                         </div>
+                     </div>
+        
+                    
+                      <div class="col-md-3">
+                        <div class="form-group">
+                            <lable>VAT No</lable>
+                            @Html.TextBoxFor(model=>model.VATNo, new  {@class="form-control" })
+
+                        </div>
+
+                      </div>
+
+                     
+                     <div class="col-md-3">
+                          <div class="form-group">
+                              <lable>PAN No</lable>
+                             @Html.TextBoxFor(model=>model.PANNo, new {@class="form-control"})
+
+
+                         </div>
+                     </div>
+                   
+                     
+
+           
+
+        
+         
+     
+         
+         
+   </div>
+
+
+
+ }
+

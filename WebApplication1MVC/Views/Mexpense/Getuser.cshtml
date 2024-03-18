@@ -1,0 +1,105 @@
+﻿@model IEnumerable<WebApplication1MVC.Models.MexpenseModel>
+
+@{
+    ViewBag.Title = "Getuser";
+}
+
+<h2>Getuser</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Expenseid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Compnyid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Module)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Specification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxLimit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Acflag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductionFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BatchExpense)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expenseid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Compnyid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Module)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpenseCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpenseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxLimit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Acflag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductionFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BatchExpense)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

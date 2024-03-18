@@ -1,0 +1,57 @@
+﻿@model IEnumerable<BrokerageModel.MasterModel.MFinanceYearModel>
+
+@{
+    ViewBag.Title = "GetReport";
+}
+
+<h2>GetReport</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Trid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinanceYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearClose)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AcFlag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Trid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinanceYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearClose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AcFlag)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { item.id})
+        </td>
+    </tr>
+}
+    
+</table>

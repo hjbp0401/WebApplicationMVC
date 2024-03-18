@@ -1,0 +1,113 @@
+﻿@model BrokerageModel.MasterModel.MExpenseModel
+
+
+@using (Html.BeginForm("Index", "Mexpense", FormMethod.Post))
+{
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="form-group">
+
+                <label> ExpenseName  </label>
+                @Html.HiddenFor(model => model.Expenseid, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.ExpenseName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>CompanyId</lable>
+                @Html.TextBoxFor(model=>model.Compnyid, new  {@class="form-control" })
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable> ExpenseCode</lable>
+                @Html.TextBoxFor(model => model.ExpenseCode, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="col-md-3 ">
+            <div class="form-group">
+                <lable>BatchExpense</lable>
+                @Html.TextBoxFor(model => model.BatchExpense, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>Specification</lable>
+                @Html.TextBoxFor(model => model.Specification, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>AcFlag</lable>
+                @Html.TextBoxFor(model => model.Acflag, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>CreatedBy</lable>
+                @Html.TextBoxFor(model => model.CreatedBy, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>CreatedOn</lable>
+                @Html.TextBoxFor(model => model.CreatedOn, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>Max-Limit</lable>
+                @Html.TextBoxFor(model => model.MaxLimit, new { @class = "form-control" })
+
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>ProductionFlag</lable>
+                @Html.TextBoxFor(model => model.ProductionFlag, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>Remark</lable>
+                @Html.TextBoxFor(model => model.Remark, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <lable>Module</lable>
+                @Html.TextBoxFor(model => model.Module, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+
+
+        <br />
+
+
+
+
+
+
+
+    </div>
+      <button class="btn btn-info" type="submit">Save</button>
+}
+

@@ -1,0 +1,170 @@
+﻿@model WebApplication1MVC.Models.McompnayModell
+
+<h2>@Html.Raw(TempData["Message"])</h2>
+
+
+@using (Html.BeginForm("SaveData", "MCompany", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <style>
+          .form-control:focus { background-color:azure
+           }
+        button {
+            width: 100px;
+            height: 40px;
+            border:  solid #893271;
+            border-radius: 5px;
+            background-color: #893271;
+            color: whitesmoke;
+            font-weight: bold;
+        } 
+        button:hover {
+            background-color: darkgray;
+        }
+
+          
+    </style>
+
+     <div class="row">
+        
+        <div class="col-md-3">
+              <div class="form-group">
+                    <label> Companycode </label>
+                    @Html.HiddenFor(model => model.CompanyID, new { @class = "form-control" })
+                    @Html.TextBoxFor(model => model.CompanyCode, new { @class = "form-control" })
+                   @Html.ValidationMessageFor(model=>model.CompanyCode,"", new  {@class="text-danger" })
+              
+              </div> 
+        </div>
+
+          <div class="col-md-3">
+              <div class="form-group">
+                  <label> CompanyName </label>
+                 @*// @Html(model => model.CompanyName, new { @class = "form-control" })*@
+                  @Html.DropDownListFor(model => model.CompanyName, ViewBag.CompanyName as SelectList, "--select--", new { @class = "form-control" })
+                  @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+               
+              </div>
+          </div>
+
+          <div class="col-md-3">
+             <div class="form-group">
+                <label>  CompanyAddress  </label>
+                @Html.TextBoxFor(model => model.CompanyAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.CompanyAddress,"",new {@class="text-danger"})
+            </div>
+         </div>
+
+         <div class="col-md-3">
+            <div class="form-group">
+                <label>  CreatedBy </label>
+                @Html.TextBoxFor(model => model.CreatedBy, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.CreatedBy, "", new  {@class="text-danger" })
+            </div>
+         </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label> CreatedOn </label>
+                @Html.TextBoxFor(model => model.CreatedOn, new { @class = "form-control", type="date"})
+                @Html.ValidationMessageFor(model=>model.CreatedOn, "", new {@class="text-danger"})
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label> cst   </label>
+                @Html.TextBoxFor(model => model.CST, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.CST,"", new {@class="text-danger"})
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>  BST </label>
+                @Html.TextBoxFor(model => model.BST, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.BST,"", new {@class="text-danger"})
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label> TallyID </label>
+
+                @Html.TextBoxFor(model => model.TallyID, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.TallyID,"", new {@class="text-danger"})
+
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label> Acflag </label>
+                @Html.TextBoxFor(model => model.Acflag, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model=>model.Acflag,"", new {@class="text-danger"})
+            </div>
+        </div>
+
+        <div class="col-md-3">
+             <div class="form-group">
+                <label>Cell  NO</label>
+                @Html.TextBoxFor(model => model.CellNO, new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model=>model.CellNO,"", new {@class="text-danger"})
+            </div>
+        </div>
+
+
+         <div class="col-md-3">
+             <div class="form-group">
+                 <label>PAN NO </label>
+                 @Html.TextBoxFor(model => model.PANNo, new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.PANNo, "", new { @class = "text-danger" })
+             </div>
+        </div>
+
+         <div class="col-md-3">
+             <div class="form-group">
+                 <label> Remark </label>
+                 @Html.TextBoxFor(model => model.Remark, new { @class = "form-control" })
+                 @Html.ValidationMessageFor(model => model.Remark, "", new { @class = "text-danger" })
+             </div>
+         </div>
+
+       
+          <div class=" col-md-3">
+              <div class="form-group">
+                  <lable> phoneNo </lable>
+                  @Html.TextBoxFor(model => model.phoneNo, new { @class = "form-control" })
+                  @Html.ValidationMessageFor(model => model.phoneNo, "", new { @class = "text-danger" })
+              </div>
+          </div>
+
+            <div class="col-md-3">
+               <div class="form-group">
+                  <lable> EmailId </lable>
+                  @Html.TextBoxFor(model => model.EmailId, new { @class = "form-control" })
+                   @Html.ValidationMessageFor(model=>model.EmailId,"", new {@class="text-dnager"})
+               </div>
+            </div>
+
+         <div class="container-fluid">
+             <lable>Image</lable>
+             <input type="file" name="ImageFile" required />
+         </div>
+
+     </div>
+     
+    
+          <br/>
+
+        <button class="btn btn-info" type="submit">Save</button>
+
+        <br />
+        <h1>
+
+        </h1>
+
+
+        @Html.ActionLink("UserList","GetReport")
+}  
+    
