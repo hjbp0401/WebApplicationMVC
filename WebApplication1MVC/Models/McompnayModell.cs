@@ -9,7 +9,7 @@ namespace WebApplication1MVC.Models
     {
         //changes
         //changes
-
+//server changes
         public int CompanyID { get; set; }
         [Required(ErrorMessage ="Required")]
         public string CompanyCode { get; set; }
