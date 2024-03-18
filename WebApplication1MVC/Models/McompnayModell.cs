@@ -7,6 +7,7 @@ namespace WebApplication1MVC.Models
 {
     public class McompnayModell
     {
+        //changes
 
         public int CompanyID { get; set; }
         [Required(ErrorMessage ="Required")]
